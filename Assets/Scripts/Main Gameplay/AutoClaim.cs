@@ -5,7 +5,6 @@ using Zenject;
 
 public class AutoClaim : MonoBehaviour
 {
-    [Space(5)]
     [Min(1)]
     [SerializeField]
     private int _scoreClaim;

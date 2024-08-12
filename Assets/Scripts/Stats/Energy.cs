@@ -17,6 +17,8 @@ public class Energy : Stat
     private void Start()
     {
         _timeRecoveryW = new WaitForSeconds(_timeRecovery);
+
+        StartCoroutine(IncreaseCoroutine());
     }
 
     public override void Decrease(int value)
@@ -30,8 +32,6 @@ public class Energy : Stat
             _current = 0;
 
         OnDecreased?.Invoke(_current);
-
-        StartCoroutine(IncreaseCoroutine());
     }
 
     public override void Increase(int value)
@@ -53,7 +53,6 @@ public class Energy : Stat
 
         Increase(_amountRecovery);
 
-        if (_current != Max)
-            StartCoroutine(IncreaseCoroutine());
+        StartCoroutine(IncreaseCoroutine());
     }
 }

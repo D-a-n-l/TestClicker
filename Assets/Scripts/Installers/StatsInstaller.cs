@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-public class StatsIntaller : MonoInstaller
+public class StatsInstaller : MonoInstaller
 {
     [SerializeField]
     private Energy _energy;

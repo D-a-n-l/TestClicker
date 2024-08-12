@@ -15,6 +15,7 @@ public class AnimatedText : MonoBehaviour
     [SerializeField]
     private float _offsetY;
 
+    [Min(0.001f)]
     [SerializeField]
     private float _duration;
 
